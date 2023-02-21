@@ -11,7 +11,7 @@
 		
     	"noImplicitAny": true,
 		// "allowJs": true,
-		"outDir": "../src/dist/",
+		"outDir": "../public",
     	"baseUrl": "..",
 	},
 	"exclude": [

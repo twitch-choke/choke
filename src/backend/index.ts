@@ -19,7 +19,7 @@ function createWindow() {
 		frame: false
 	});
 
-	win.loadFile(path.join(__dirname, '..', 'index.html'));
+	win.loadFile(path.join(__dirname, 'index.html'));
 }
 
 app.on('ready', createWindow);

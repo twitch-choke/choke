@@ -8,7 +8,7 @@
 		"sourceMap": false,
 		"noImplicitAny": true,
 		
-		"outDir": "../src/dist",
+		"outDir": "../public",
 		"baseUrl": "..",
 		"paths": {
 			"*": [

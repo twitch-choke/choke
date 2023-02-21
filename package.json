@@ -1,5 +1,5 @@
 {
-	"name": "ttvkp-2.0",
+	"name": "choke",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -10,16 +10,15 @@
 		"@types/react-dom": "^18.0.11",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-scripts": "5.0.1",
 		"typescript": "^4.9.5",
 		"web-vitals": "^2.1.4"
 	},
-	"main": "src/dist/backend.js",
+	"main": "public/electron.js",
 	"scripts": {
 		"dev": "concurrently -k \"yarn watch\" \"yarn backend:start\"",
 		"start": "yarn build && yarn backend:start",
-		"build": "yarn frontend:build && yarn renderer:build && yarn backend:build",
-		"watch": "concurrently -k \"yarn frontend:watch\" \"yarn renderer:watch\" \"yarn backend:watch\" ",
+		"build": "yarn frontend:build && yarn renderer:build && yarn backend:build && electron-builder",
+		"watch": "concurrently -k \"yarn frontend:watch\" \"yarn renderer:watch\" \"yarn backend:watch\"",
 		"frontend:build": "webpack --config configs/webpack.frontend.js",
 		"frontend:watch": "webpack --config configs/webpack.frontend.js -w",
 		"renderer:build": "webpack --config configs/webpack.renderer.js",
@@ -27,7 +26,8 @@
 		"backend:build": "webpack --config configs/webpack.backend.js",
 		"backend:watch": "webpack --config configs/webpack.backend.js -w",
 		"backend:start": "electron .",
-		"electron:build": "yarn build"
+		"electron:build": "electron-builder",
+		"check": "yarn-update-all"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -51,10 +51,36 @@
 		"concurrently": "^7.6.0",
 		"cross-env": "^7.0.3",
 		"electron": "^23.1.0",
+		"electron-builder": "^23.6.0",
 		"ts-loader": "^9.4.2",
 		"wait-on": "^7.0.1",
 		"webpack": "^5.75.0",
 		"webpack-cli": "^5.0.1",
-		"webpack-node-externals": "^3.0.0"
+		"react-scripts": "5.0.1",
+		"webpack-node-externals": "^3.0.0",
+		"yarn-upgrade-all": "^0.7.2"
+	},
+	"description": "Allow your twitch chat to control your keyboard and other actions using commands and channel redeems",
+	"repository": "https://github.com/twitch-choke/choke.git",
+	"author": "Leialoha",
+	"license": "All Rights Reserved",
+	"build": {
+		"appId": "com.github.leialoha.choke",
+		"productName": "Choke",
+		"mac": {
+			"category": "public.app-category.utilities"
+		},
+		"copyright": "Copyright © 2023 ${author}",
+		"files": [
+			"public/**/*",
+			"node_modules/**/*",
+			"!src/**/*",
+			"!configs/**/*",
+			"!README.md",
+			"!**/*.log"
+		],
+		"extraMetadata": {
+			"main": "public/electron.js"
+		}
 	}
 }

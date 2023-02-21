@@ -20,6 +20,6 @@ module.exports = {
 	},
 	output: {
 		filename: 'frontend.js',
-		path: path.resolve(__dirname, '..', 'src', 'dist'),
+		path: path.resolve(__dirname, '..', 'public'),
 	},
 };

@@ -9,8 +9,10 @@
 /coverage
 
 # Production
+/dist
 /build
-/src/dist
+/public/*.js
+/public/*.LICENSE.txt
 
 # Misc
 .DS_Store
@@ -23,4 +25,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-temp.*
+*.log

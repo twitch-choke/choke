@@ -113,7 +113,7 @@ body {
 .tabs-152TJMp0bSun8qbx {
 	grid-area: ⬅️;
 	background-color: var(--background-tertiary-color);
-	padding: calc(var(--size)/2) 0;
+	/* padding: calc(var(--size)/2) 0; */
 	display: flex;
 	gap: calc(var(--size)*0.15);
 	flex-direction: column;

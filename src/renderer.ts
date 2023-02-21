@@ -31,10 +31,3 @@ contextBridge.exposeInMainWorld(
 		}
 	},
 );
-
-contextBridge.exposeInMainWorld(
-	'storage', {
-		local: localStorage,
-		session: sessionStorage
-	}
-);

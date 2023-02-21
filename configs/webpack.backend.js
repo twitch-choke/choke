@@ -26,7 +26,7 @@ module.exports = {
 		extensions: ['.ts'],
 	},
 	output: {
-		filename: 'backend.js',
-		path: path.resolve(__dirname, '..', 'src', 'dist'),
+		filename: 'electron.js',
+		path: path.resolve(__dirname, '..', 'public'),
 	},
 };
