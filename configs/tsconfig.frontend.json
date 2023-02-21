@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"module": "es6",
+		"target": "es5",
+		"jsx": "react",
+		"moduleResolution": "node",
+		
+		"alwaysStrict": true,
+    	"removeComments": true,
+    	"sourceMap": false,
+		
+    	"noImplicitAny": true,
+		// "allowJs": true,
+		"outDir": "../src/dist/",
+    	"baseUrl": "..",
+	},
+	"exclude": [
+		"../src/backend/**/*",
+		"../src/dist/**/*",
+	],
+	"include": [
+		"../src/frontend/**/*",
+		"../src/common/**/*",
+	]
+}

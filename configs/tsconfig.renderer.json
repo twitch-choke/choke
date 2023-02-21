@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+
+		"alwaysStrict": true,
+		"removeComments": true,
+		"sourceMap": false,
+		"noImplicitAny": true,
+		
+		"outDir": "../src/dist",
+		"baseUrl": "..",
+		"paths": {
+			"*": [
+				"../node_modules/*"
+			]
+		}
+	},
+	"exclude": [
+		"../node_modules/**/*"
+	],
+	"include": [
+		"../src/backend/**/*"
+	]
+}
